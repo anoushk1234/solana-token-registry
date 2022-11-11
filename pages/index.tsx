@@ -20,7 +20,7 @@ const Home: NextPage = () => {
 		new TokenListProvider().resolve().then((tokens) => {
 			const tokenList = tokens.filterByClusterSlug("mainnet-beta").getList();
 			setTokenList(tokenList);
-			console.log(tokenList.find((token: Token) => token.symbol == "DUST"));
+			console.log(tokenList.find((token: TokenInfo) => token.symbol == "DUST"));
 			console.log(tokenList)
 		});
 	}, []);
