@@ -18,7 +18,7 @@ const Home: NextPage = () => {
 	const [choice, setChoice] = useState<TokenInfo>();
 	useEffect(() => {
 		new TokenListProvider().resolve().then((tokens) => {
-			const tokenList = tokens.filterByClusterSlug("devnet").getList();
+			const tokenList = tokens.filterByClusterSlug("mainnet-beta").getList();
 			setTokenList(tokenList);
 			// console.log(tokenList.find((token: Token) => token.symbol == "SRM"));
 		});
